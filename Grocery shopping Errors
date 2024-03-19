@@ -1,0 +1,12 @@
+Error 01
+------------
+Widget build(BuildContext context) {
+    return const Scaffold(
+      body: _pages[1],  Invalid constant value
+    );
+  }
+solution 01
+-----------
+remove const in "return const Scaffold"
+
+
