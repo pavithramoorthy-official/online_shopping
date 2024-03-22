@@ -126,7 +126,9 @@ class _UserScreenState extends State<UserScreen> {
                 _listtile(
                   titileName: "Logout",
                   iconName: IconlyLight.logout,
-                  onpressed: () {},
+                  onpressed: () {
+                    _logoutDialogue();
+                  },
                   color: color,
                 ),
               ],
@@ -137,12 +139,52 @@ class _UserScreenState extends State<UserScreen> {
     );
   }
 
+  Future<void> _logoutDialogue() async {
+    await showDialog(
+        context: context,
+        builder: ((context) {
+          return AlertDialog(
+            title: const Text(
+              "Logout",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            content: const Text("Do you Want to Logout?"),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  if (Navigator.canPop(context)) {
+                    Navigator.pop(context);
+                  }
+                },
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Ok",
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ],
+          );
+        }));
+  }
+
   Future<void> _updateAddressDialogue() async {
     await showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Text("Update"),
+            title: const Text("Update Address"),
             content: TextField(
               maxLines: 5,
               controller: _updateAddressController,
