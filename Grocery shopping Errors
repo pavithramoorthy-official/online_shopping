@@ -10,3 +10,35 @@ solution 01
 remove const in "return const Scaffold"
 
 
+Error 01
+------------
+ Widget build(BuildContext context) {
+    return Scaffold(
+      key: context.read<MenuController>().getScaffoldKey,
+//error  - key: context.read<MenuController>().getScaffoldKey, in MenuController
+//The name 'MenuController' is defined in the libraries 'package:admin_panel/controllers/menu_controller.dart' and 'package:flutter/src/material/menu_anchor.dart (via package:flutter/material.dart)'.
+//Try using 'as prefix' for one of the import directives, or hiding the name from all but one of the imports.
+      drawer: const SideMenu(),
+      body: SafeArea(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (Responsive.isDesktop(context))
+              const Expanded(
+                child: SideMenu(),
+              ),
+            const Expanded(
+              flex: 5,
+              child: DashboardScreen(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+solution 02
+-----------
+import 'package:admin_panel/controllers/menu_controller.dart' as item;
+
+key: context.read<item.MenuController>().getScaffoldKey,
