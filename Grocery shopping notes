@@ -9,3 +9,13 @@ card_swiper -https://pub.dev/packages/card_swiper
 staggered_Grid_view - https://pub.dev/packages/flutter_staggered_grid_view
 
 badges - https://pub.dev/packages/badges/install
+
+
+
+
+=============================================
+Admin panel - Product widget - image.network not displaying while running in chrome.
+Solution - Use Web renderer command
+flutter run -d chrome --web-renderer html
+------------------------------------------------------------
+
