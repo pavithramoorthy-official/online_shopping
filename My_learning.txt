@@ -1,0 +1,24 @@
+SingleChildScrollView(
+  Column(
+    GridView.Builder(
+      itemBuilder(context,index){
+        return ProductWidget();
+      }  
+    ),
+  ),
+),
+==> GridView doesn't work
+Solution
+--------
+SingleChildScrollView(
+  Column(
+    GridView.Builder(
+    physics:NeverScrollableScrollPhysics(),
+    shrimkwrap:true
+     itemBuilder(context,index){
+        return ProductWidget();
+      } 
+    )
+  )
+)
+After giving physics and shrinkwrap it displays products widgets in grid view
