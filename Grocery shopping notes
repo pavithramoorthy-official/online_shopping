@@ -10,7 +10,10 @@ staggered_Grid_view - https://pub.dev/packages/flutter_staggered_grid_view
 
 badges - https://pub.dev/packages/badges/install
 
-dotted border - https://pub.dev/packages/dotted_border   (used in admin panel image upload)
+used in admin panel image upload
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dotted border - https://pub.dev/packages/dotted_border   
+image_picker - https://pub.dev/packages/image_picker/install
 
 
 
