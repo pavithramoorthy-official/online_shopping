@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:grocery_shopping/Auth/forget_password.dart';
+import 'package:grocery_shopping/Auth/login_screen.dart';
+import 'package:grocery_shopping/Auth/signup.dart';
+import 'package:grocery_shopping/constants/theme_data.dart';
+import 'package:grocery_shopping/inner_screens/feed_screen.dart';
+import 'package:grocery_shopping/inner_screens/onsale_screen.dart';
+import 'package:grocery_shopping/inner_screens/product_details.dart';
+import 'package:grocery_shopping/provider/dark_theme_provider.dart';
+import 'package:grocery_shopping/screens/bottom_bar.dart';
+import 'package:grocery_shopping/screens/home_screen.dart';
+import 'package:grocery_shopping/screens/orders/order_screen.dart';
+import 'package:grocery_shopping/screens/viewed/viewed_screen.dart';
+import 'package:grocery_shopping/screens/wishlist/wishlist_screen.dart';
+import 'package:grocery_shopping/widgets/feed_widget.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
+}
+
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  DarkThemeProvider themeChangeProvider = DarkThemeProvider();
+
+  void getCurrentAppTheme() async {
+    themeChangeProvider.setDarkThemeProvider =
+        await themeChangeProvider.darkThemePreference.getThemePreference();
+  }
+
+  @override
+  void initState() {
+    getCurrentAppTheme();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) {
+          return themeChangeProvider;
+        })
+      ],
+      //instead of initializing the provider for whole file we do it for one widget - consumer
+      child:
+          Consumer<DarkThemeProvider>(builder: (context, themeProvider, child) {
+        return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: Styles.themedata(themeProvider.getDarkTheme, context),
+            home: const BottomBarScreen(),
+            routes: {
+              OnSaleScreen.routeName: (ctx) => const OnSaleScreen(),
+              FeedScreen.routeName: (ctx) => const FeedScreen(),
+              ProductDetails.routeName: (ctx) => const ProductDetails(),
+              WishlistScreen.routeName: (ctx) => const WishlistScreen(),
+              OrderScreen.routeName: (ctx) => const OrderScreen(),
+              ViewedRecentlyScreen.routeName: (ctx) =>
+                  const ViewedRecentlyScreen(),
+              HomeScreen.routeName: (ctx) => const HomeScreen(),
+              BottomBarScreen.routeName: (ctx) => const BottomBarScreen(),
+              LoginScreen.routeName: (ctx) => const LoginScreen(),
+              SignUp.routeName: (ctx) => const SignUp(),
+              ForgotPassword.routeName: (ctx) => const ForgotPassword(),
+            });
+      }),
+    );
+  }
+}
