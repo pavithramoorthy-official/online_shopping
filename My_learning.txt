@@ -21,4 +21,11 @@ SingleChildScrollView(
     )
   )
 )
+
+
 After giving physics and shrinkwrap it displays products widgets in grid view
+
+
+-----------------------------------
+Layout Inspector 
+  - use it to rectify overflowed pixels
