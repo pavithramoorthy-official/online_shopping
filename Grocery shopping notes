@@ -24,3 +24,23 @@ Solution - Use Web renderer command
 flutter run -d chrome --web-renderer html
 ------------------------------------------------------------
 
+=============================================
+FIREBASE connection
+=============================================
+  1
+------------------------------------------------------------
+
+i downloaded JDK and added the following to environment variable
+C:\Program Files\Java\jdk-21\
+------------------------------------------------------------
+2
+------------------------------------------------------------
+In the cmd prompt executed the following command
+
+keytool -list -v -alias androiddebugkey -keystore C:\Users\user\.android\debug.keystore
+(I already have debug.keystore in the given location)
+
+==> after executing the above cmd, it gave a Key, i copied and pasted that key in firebase
+------------------------------------------------------------
+
+
