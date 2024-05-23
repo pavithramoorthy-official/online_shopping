@@ -15,6 +15,10 @@ used in admin panel image upload
 dotted border - https://pub.dev/packages/dotted_border   
 image_picker - https://pub.dev/packages/image_picker/install
 
+Firebase only works with this package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+firebase_core - https://pub.dev/packages/firebase_core
+
 
 
 
