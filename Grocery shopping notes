@@ -18,6 +18,7 @@ image_picker - https://pub.dev/packages/image_picker/install
 Firebase only works with this package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 firebase_core - https://pub.dev/packages/firebase_core
+firebase_auth - https://pub.dev/packages/firebase_auth/install
 
 
 
