@@ -49,3 +49,20 @@ keytool -list -v -alias androiddebugkey -keystore C:\Users\user\.android\debug.k
 ------------------------------------------------------------
 
 
+=============================================
+Firebase Initialization - Successfull - 03/06/2024
+=============================================
+I created firebase account - https://console.firebase.google.com/
+    - gave "package name" - copied from kotlin manifest file
+    - generated key - 
+        actual cmd - "keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore"
+        my cmd = "keytool -list -v -alias androiddebugkey -keystore C:\Users\user\.android\debug.keystore"
+    - it generated 2 key - SHA1, SHA 256 - i updated both in the firebase console
+    - the download json file and placed in android/app file as shown in the picture
+    - added plugins as shown 
+          it threw error - i change minsdk to 21, error got rectified  
+then,
+I followed these exactly
+https://firebase.google.com/docs/flutter/setup?hl=en&authuser=0&platform=android
+https://firebase.google.com/docs/cli?authuser=0#install-cli-windows
+
