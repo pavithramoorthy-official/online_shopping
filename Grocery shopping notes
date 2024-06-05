@@ -10,6 +10,9 @@ staggered_Grid_view - https://pub.dev/packages/flutter_staggered_grid_view
 
 badges - https://pub.dev/packages/badges/install
 
+flutter_spinkit - https://pub.dev/packages/flutter_spinkit 
+  (loading animation for signup form)
+
 used in admin panel image upload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dotted border - https://pub.dev/packages/dotted_border   
