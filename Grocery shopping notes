@@ -13,6 +13,9 @@ badges - https://pub.dev/packages/badges/install
 flutter_spinkit - https://pub.dev/packages/flutter_spinkit 
   (loading animation for signup form)
 
+fluttertoast - https://pub.dev/packages/fluttertoast
+  (to display toast message)
+
 used in admin panel image upload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dotted border - https://pub.dev/packages/dotted_border   
