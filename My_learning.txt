@@ -105,5 +105,22 @@ Login Screen Code
 const GoogleButton(),
 
 -------------------------------------------------------------------------------------------
+===========================================================================================
+Firebase initialization
+===========================================================================================
+ await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
+this only works if we give 
+import 'firebase_options.dart';
+
+but the above import file is accepted only if we configure through flutterfire configure command in terminal
+we need to follow the steps given in the line
+https://firebase.google.com/docs/flutter/setup?platform=web
+
+firebase login
+ if login does not work we need to instal Firebase CLI - https://firebase.google.com/docs/cli#setup_update_cli
+dart pub global activate flutterfire_cli
+flutterfire configure
 
