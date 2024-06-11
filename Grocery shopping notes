@@ -25,6 +25,9 @@ Firebase only works with this package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 firebase_core - https://pub.dev/packages/firebase_core
 firebase_auth - https://pub.dev/packages/firebase_auth/install
+firebase_core - https://pub.dev/packages/firebase_core
+cloud_firestore - https://pub.dev/packages/cloud_firestore/install
+firebase_storage - flutter pub add firebase_storage
 
 
 
