@@ -20,8 +20,11 @@ used in admin panel image upload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dotted border - https://pub.dev/packages/dotted_border   
 image_picker - https://pub.dev/packages/image_picker/install
+
 uuid - https://pub.dev/packages/uuid/install
   (used to generate random numbers)
+fluttertoast - https://pub.dev/packages/fluttertoast
+  (to display toast message)
 
 Firebase only works with this package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
