@@ -25,6 +25,8 @@ uuid - https://pub.dev/packages/uuid/install
   (used to generate random numbers)
 fluttertoast - https://pub.dev/packages/fluttertoast
   (to display toast message)
+firebase_storage - flutter pub add firebase_storage
+
 
 Firebase only works with this package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
