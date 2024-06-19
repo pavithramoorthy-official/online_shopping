@@ -16,6 +16,9 @@ flutter_spinkit - https://pub.dev/packages/flutter_spinkit
 fluttertoast - https://pub.dev/packages/fluttertoast
   (to display toast message)
 
+uuid - https://pub.dev/packages/uuid/install
+  (used to generate random numbers)
+
 used in admin panel image upload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dotted border - https://pub.dev/packages/dotted_border   
